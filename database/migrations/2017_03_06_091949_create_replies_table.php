@@ -12,13 +12,13 @@ class CreateRepliesTable extends Migration
      */
     public function up()
     {
-        Schema::create('replies', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('comment_id')->unsigned();
-            $table->foreign('comment_id')->references('id')->on('comments');
-            $table->text('content');
-            $table->timestamps();
-        });
+//        Schema::create('replies', function (Blueprint $table) {
+//            $table->increments('id');
+//            $table->integer('comment_id')->unsigned();
+//            $table->foreign('comment_id')->references('id')->on('comments');
+//            $table->text('content');
+//            $table->timestamps();
+//        });
     }
 
     /**
@@ -28,9 +28,9 @@ class CreateRepliesTable extends Migration
      */
     public function down()
     {
-        if(Schema::hasTable('replies')){
-        Schema::drop('replies');
-        }
+//        if(Schema::hasTable('replies')){
+//        Schema::drop('replies');
+//        }
         
         }
 }
